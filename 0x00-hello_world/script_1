@@ -1,2 +1,0 @@
-#!/bin/c89
-gcc 0-preprocessor > c
