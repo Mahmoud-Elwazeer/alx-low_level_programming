@@ -15,12 +15,10 @@ int main(void)
 	{
 		for (j = i; j <= '9'; j++)
 		{
-			for (k = j; k <= '9'; k++)
+			for (k = i; k <= '9'; k++)
 			{
-				for (w = k; w <= '9'; w++)
+				for (w = j + 1; w <= '9'; w++)
 				{
-					if ((i == '0') && (j == '0') && (k == '0') && (w == '0'))
-						continue;
 					putchar(i);
 					putchar(j);
 					putchar(' ');
