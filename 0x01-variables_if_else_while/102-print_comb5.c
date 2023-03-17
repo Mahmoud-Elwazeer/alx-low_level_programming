@@ -13,11 +13,11 @@ int main(void)
 
 	for (i = '0'; i <= '9'; i++)
 	{
-		for (j = '0'; j <= '9'; j++)
+		for (j = i; j <= '9'; j++)
 		{
-			for (k = '0'; k <= '9'; k++)
+			for (k = j; k <= '9'; k++)
 			{
-				for (w = '0'; w <= '9'; w++)
+				for (w = k; w <= '9'; w++)
 				{
 					if ((i == '0') && (j == '0') && (k == '0') && (w == '0'))
 						continue;
