@@ -9,18 +9,25 @@
  */
 int main(void)
 {
-	int i, j;
+	int i, j, k, w;
 
 	for (i = '0'; i <= '9'; i++)
 	{
 		for (j = '0'; j <= '9'; j++)
 		{
-			putchar(i);
-			putchar(j);
-			if ((i == '9') && (j == '9'))
-				continue;
-			putchar(',');
-			putchar(' ');
+			for (k = '0'; k <= '9'; k++)
+			{
+				for (w = k + 1; w <= '9'; w++)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(' ');
+					putchar(k);
+					putchar(w);
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
 	putchar('\n');
