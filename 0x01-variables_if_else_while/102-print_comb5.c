@@ -9,25 +9,21 @@
  */
 int main(void)
 {
-	int i, j, k, w;
+	int i, j;
 
-	for (i = '0'; i <= '9'; i++)
+	for (i = 0; i <= 98; i++)
 	{
-		for (j = i; j <= '9'; j++)
+		for (j = i + 1; j <= 99; j++)
 		{
-			for (k = i; k <= '9'; k++)
-			{
-				for (w = j + 1; w <= '9'; w++)
-				{
-					putchar(i);
-					putchar(j);
-					putchar(' ');
-					putchar(k);
-					putchar(w);
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar((i / 10) + '0');
+			putchar((i % 10) + '0');
+			putchar(' ');
+			putchar((j / 10) + '0');
+			putchar((i % 10) + '0');
+		        if ((i == 98) && (j == 99))
+				continue;
+ 			putchar(',');
+			putchar(' ');			
 		}
 	}
 	putchar('\n');
