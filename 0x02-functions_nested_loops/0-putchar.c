@@ -3,9 +3,9 @@
 
 void printword(char word[]);
 /**
- * main -> Entry Point
+ * main: Entry Point
  *
- * return -> Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -14,8 +14,8 @@ int main(void)
 }
 
 /**
- * printword -> print (_putchar)
- * @word -> String word that want to print
+ * printword: print (_putchar)
+ * @word: String word that want to print
  * No Return
  */
 void printword(char word[])
