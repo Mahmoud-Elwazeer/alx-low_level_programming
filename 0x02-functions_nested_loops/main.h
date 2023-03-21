@@ -1,1 +1,1 @@
-void printword(char word[]);
+int _putchar(char c);

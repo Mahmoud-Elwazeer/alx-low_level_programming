@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
+void printword(char word[]);
 /**
  * main -> Entry Point
  * 
@@ -12,9 +13,15 @@ int main(void)
 	return (0);
 }
 
+/**
+ * printword -> print (_putchar)
+ * No Return
+ */
 void printword(char word[])
 {
-	for (int i = 0; word[i] != '\0')
+	int i;
+
+	for (i = 0; word[i] != '\0'; i++)
 	{
 		_putchar(word[i]);
 	}	
