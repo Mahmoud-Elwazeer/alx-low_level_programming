@@ -1,4 +1,5 @@
 #include "main.h"
+#include "func1.h"
 
 /**
  * main - Entry Point
