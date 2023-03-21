@@ -16,11 +16,9 @@ int main(void)
 }
 
 /**
- * printword: print (_putchar)
+ * printword: print string
  *
  * @word: String word that want to print
- * 
- * Objective: print string
  */
 void printword(char word[])
 {
