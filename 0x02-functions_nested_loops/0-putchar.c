@@ -5,7 +5,7 @@ void printword(char word[]);
 /**
  * main -> Entry Point
  *
- * Return -> Always 0 (Success)
+ * return -> Always 0 (Success)
  */
 int main(void)
 {
@@ -15,7 +15,7 @@ int main(void)
 
 /**
  * printword -> print (_putchar)
- * @arg -> String word that want to print
+ * @word -> String word that want to print
  * No Return
  */
 void printword(char word[])
