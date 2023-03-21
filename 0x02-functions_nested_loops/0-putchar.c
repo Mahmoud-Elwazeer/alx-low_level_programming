@@ -3,7 +3,7 @@
 
 void printword(char word[]);
 /**
- * main: Entry Point
+ * main - Entry Point
  *
  * Objective: print(_putchar)
  *
@@ -16,7 +16,7 @@ int main(void)
 }
 
 /**
- * printword: print string
+ * printword - print string
  *
  * @word: String word that want to print
  */
