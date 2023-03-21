@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 void printword(char word[]);
