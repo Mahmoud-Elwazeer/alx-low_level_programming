@@ -9,13 +9,14 @@ int main(void)
 	long f1 = 1, f2 = 2, f3;
 	int i;
 
-	printf("%ld, %ld", f1 , f2);
-	for (i = 0; i < 50; i++)
+	printf("%ld, %ld", f1, f2);
+	for (i = 0; i < 48; i++)
 	{
 		f3 = f1 + f2;
 		f1 = f2;
 		f2 = f3;
 		printf(", %ld", f3);
 	}
+	printf("\n");
 	return (0);
 }
