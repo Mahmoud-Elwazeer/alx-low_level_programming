@@ -5,15 +5,19 @@
  * @size: the size of square
  * Return: void
  */
-void print_square(int size);
+void print_square(int size)
 {
 	int i, j;
 
-	for (i = 1; i <= size; i++)
+	if (size >= 1)
 	{
-		for (j = 2; j <= size; j++)
-			_putchar('#');
-		_putchar('\n');
+		for (i = 1; i <= size; i++)
+		{
+			for (j = i; j <= size; j++)
+				_putchar('#');
+			_putchar('\n');
+		}
 	}
-	_putchar('\n');
+	else
+		_putchar('\n');
 }
