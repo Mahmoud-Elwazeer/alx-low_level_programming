@@ -18,7 +18,7 @@ void print_number(int n)
 		if (n < 0)
 		{
 			flag = -1;
-			n = -n
+			n = -n;
 		}
 		while (calc > 0)
 		{
