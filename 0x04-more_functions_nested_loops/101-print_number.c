@@ -19,6 +19,7 @@ void print_number(int n)
 		{
 			flag = -1;
 			n = -n;
+			calc = n;
 		}
 		while (calc > 0)
 		{
