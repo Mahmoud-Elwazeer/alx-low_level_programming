@@ -20,19 +20,26 @@ int main(void)
  */
 void prime_factors(long n)
 {
-	int i;
+	int i = 2;
 	long check = n;
 
-	for (i = 2; i <= n; i++)
+	while (i <= check)
 	{
 		if (check % i == 0)
 		{
 			if (check / i == 1)
+			{
+				i++;
 				continue;
-			check = check / i;
-			i = 2;
-			printf("%ld ", check);
+			}
+			else
+			{
+				check = check / i;
+				i = 2;
+			}
 		}
+		else
+			i++;
 	}
 	printf("%ld\n", check);
 }
