@@ -25,7 +25,7 @@ void print_number(int n)
 			calc = calc / 10;
 			count++;
 		}
-		if (flag = -1)
+		if (flag == -1)
 			_putchar('-');
 		while (count > 0)
 		{
