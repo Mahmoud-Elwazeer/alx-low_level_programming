@@ -24,7 +24,7 @@ int _atoi(char *s)
 		{
 			for (j = 0; j < count; j++)
 				p *= 10;
-			r = r*p + (*(s + i) - '0');
+			r = r * p + (*(s + i) - '0');
 			p = 1;
 			count++;
 		}
