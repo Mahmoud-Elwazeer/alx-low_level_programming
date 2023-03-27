@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_array: print array
+ * print_array - print array
  * @a: pointer point start arr
  * @n: size array
  * Return: void
