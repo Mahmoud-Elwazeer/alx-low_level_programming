@@ -8,6 +8,7 @@
 int _atoi(char *s)
 {
 	int i, r = 0, flag = 1;
+	int count = 0, j = 0, p = 1;
 
 	for (i = 0; (*(s + i)) != '\0'; i++)
 	{
@@ -20,7 +21,13 @@ int _atoi(char *s)
 		if ((*(s + i) >= 'A' && *(s + i) <= 'Z'))
 			continue;
 		if (*(s + i) >= '0' && *(s + i) <= '9')
-			r = *(s + i) - '0';
+		{
+			for (j = 0; j < count; j++)
+				p *= 10;
+			r = r*p + (*(s + i) - '0');
+			p = 1;
+			count++;
+		}
 	}
 	return (r * flag);
 }
