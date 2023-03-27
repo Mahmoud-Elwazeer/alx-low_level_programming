@@ -7,16 +7,27 @@
  */
 void puts_half(char *str)
 {
-	int count, i = 0;
+	int count, i;
 
 	for (count = 0; (*(str + count)) != '\0'; count++)
 		;
-	while (*(str + i) != '\0')
+	if (count % 2 == 0)
 	{
-		i++;
-		if ((i < count / 2) && (i != count))
-			continue;
-		_putchar(*(str + i));
+		i = count / 2;
+		while ((*(str + i)) != '\0')
+		{
+			_putchar(*(str + i));
+			i++;
+		}
+	}
+	else
+	{
+		i = count / 2 + 1;
+		 while ((*(str + i)) != '\0')
+                {
+                        _putchar(*(str + i));
+                        i++;
+                }
 	}
 	_putchar('\n');
 }
