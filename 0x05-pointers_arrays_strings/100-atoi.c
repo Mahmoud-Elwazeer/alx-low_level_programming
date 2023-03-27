@@ -7,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	int i, r, flag;
+	int i, r, flag = 1;
 
 	for (i = 0; (*(s + i)) != '\0'; i++)
 	{
