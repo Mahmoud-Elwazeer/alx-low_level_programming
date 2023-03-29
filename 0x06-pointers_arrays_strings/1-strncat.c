@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcat - concatenates two strings
+ * _strncat - concatenates two strings
  * @dest: pointer
  * @scr: pointer
  * @n: it will use at most n bytes from src
