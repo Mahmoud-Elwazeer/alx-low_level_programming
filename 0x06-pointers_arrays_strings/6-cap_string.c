@@ -29,7 +29,7 @@ char *cap_string(char *s)
 				flag = 1;
 				continue;
 		}
-		if (flag == 1 && (*(s + i) >= 'a' && *(s + i) <= 'z'))
+		if ((flag == 1) && (*(s + i) >= 'a' && *(s + i) <= 'z'))
 			*(s + i) -= 32;
 		flag = 0;
 	}
