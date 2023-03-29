@@ -3,8 +3,8 @@
 /**
  * _strncar - concatenates two strings
  * @dest: string destination
- * @src: string Source
- * @n: Number Limit
+ * @src: string source
+ * @n: number limit
  * Return: string concatenates two strings
  */
 char *_strncat(char *dest, char *src, int n)
