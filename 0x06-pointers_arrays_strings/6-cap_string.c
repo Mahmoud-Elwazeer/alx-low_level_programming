@@ -32,8 +32,8 @@ char *cap_string(char *s)
 		if (flag == 1 && (*(s + i) >= 'a' && *(s + i) <= 'z'))
 		{
 			*(s + i) -= 32;
-			flag = 0;
 		}
+		flag = 0;
 	}
 	return (s);
 }
