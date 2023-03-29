@@ -7,7 +7,7 @@
  */
 char *cap_string(char *s)
 {
-	int i, flag = 0;
+	int i, flag= 0;
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
@@ -30,9 +30,7 @@ char *cap_string(char *s)
 				continue;
 		}
 		if (flag == 1 && (*(s + i) >= 'a' && *(s + i) <= 'z'))
-		{
 			*(s + i) -= 32;
-		}
 		flag = 0;
 	}
 	return (s);
