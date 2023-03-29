@@ -14,6 +14,7 @@ char *cap_string(char *s)
 		switch(*(s + i))
 		{
 			case ' ':
+			case '\t':
 			case '\n':
 			case ',':
 			case ';':
@@ -26,10 +27,6 @@ char *cap_string(char *s)
 			case '{':
 			case '}':
 				flag = 1;
-				continue;
-			case '\t':
-				flag = 1;
-				*(s + i) = ' ';
 				continue;
 		}
 		if (flag == 1 && (*(s + i) >= 'a' && *(s + i) <= 'z'))
