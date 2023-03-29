@@ -4,6 +4,7 @@
  * string_toupper -  changes all lowercase letters of a string to uppercase.
  * @s: pointer
  * Return: UPPER Sring
+ * Description: Uisng ASCII Code A = 65 , a = 97 , a - 32 = A
  */
 char *string_toupper(char *s)
 {
