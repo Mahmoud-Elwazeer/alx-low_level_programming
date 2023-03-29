@@ -19,7 +19,6 @@ char *cap_string(char *s)
 			case ',':
 			case ';':
 			case '.':
-			case '.':
 			case '!':
 			case '?':
 			case '"':
@@ -28,9 +27,7 @@ char *cap_string(char *s)
 			case '{':
 			case '}':
 				flag = 1;
-				break;
-			default:
-				break;
+				continue;
 		}
 		if (flag == 1)
 		{
