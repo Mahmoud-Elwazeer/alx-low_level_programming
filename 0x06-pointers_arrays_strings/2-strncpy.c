@@ -1,6 +1,12 @@
 #include "main.h"
 
-
+/**
+ * _strncpy - copy string
+ * @dest: string destination
+ * @src: string source
+ * @n: Number limit
+ * Return: Copy string indesst
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i, size = 0;
