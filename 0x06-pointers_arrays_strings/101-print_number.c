@@ -36,5 +36,4 @@ void print_number(int n)
 			count--;
 		}
 	}
-	_putchar('\n');
 }
