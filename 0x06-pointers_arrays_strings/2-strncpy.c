@@ -1,6 +1,12 @@
 #include "main.h"
 
-
+/**
+ * _strncpy - copies string
+ * @dest: New copy
+ * @src: source of string
+ * @n: Number of character to copy
+ * Return: copy string
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i, size = 0;
