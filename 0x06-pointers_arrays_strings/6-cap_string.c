@@ -11,6 +11,8 @@ char *cap_string(char *s)
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
+		if (i == 0)
+			*(s + i) -= 32;
 		switch (*(s + i))
 		{
 			case ' ':
