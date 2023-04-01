@@ -11,7 +11,7 @@ char *cap_string(char *s)
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		switch(*(s + i))
+		switch (*(s + i))
 		{
 			case ' ':
 			case '\t':
