@@ -4,7 +4,7 @@
  * _strchr - return string starting with char c
  * @s: pinter to string
  * @c: charcter
- * Return - pointer to the first occurrence of the character c in the string s
+ * Return: pointer to the first occurrence of the character c in the string s
  */
 char *_strchr(char *s, char c)
 {
