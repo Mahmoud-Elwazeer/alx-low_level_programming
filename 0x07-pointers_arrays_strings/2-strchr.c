@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strchr - return string starting with char c
@@ -21,5 +22,5 @@ char *_strchr(char *s, char c)
 	if (flag == 1)
 		return (s + i);
 	else
-		return ('\0');
+		return (NULL);
 }
