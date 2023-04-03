@@ -19,5 +19,5 @@ char *_strstr(char *haystack, char *needle)
 	if (flag)
 		return (needle);
 	else
-		return ('\0');
+		return (haystack);
 }
