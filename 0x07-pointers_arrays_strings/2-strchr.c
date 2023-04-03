@@ -18,8 +18,5 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	if (flag)
-		return (s + i);
-	else
-		return ('\0');
+	return (s + i);
 }
