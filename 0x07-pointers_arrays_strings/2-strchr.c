@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * _strchr - return string starting with char c
@@ -19,8 +18,8 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	if (flag == 1)
+	if (flag == 1 || *(s + i) == '\0')
 		return (s + i);
 	else
-		return (NULL);
+		return ('\0');
 }
