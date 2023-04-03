@@ -18,7 +18,7 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	if (flag == 1 || *(s + i) == '\0')
+	if (flag == 1 || (*(s + i) == '\0' && c == '\0'))
 		return (s + i);
 	else
 		return ('\0');
