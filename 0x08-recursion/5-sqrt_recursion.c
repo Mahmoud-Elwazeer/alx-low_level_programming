@@ -12,6 +12,7 @@ int _sqrt_aux(int low, int high, int n)
 	if (low <= high)
 	{
 		int mid = (low + high) / 2;
+
 		if (mid * mid == n)
 			return (mid);
 		else if (mid * mid > high)
