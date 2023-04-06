@@ -14,7 +14,7 @@ int is_prime_number_aux(int n, int i)
 		return (1);
 	if (n % i == 0)
 		return (0);
-	if (i * i > n)
+	if (i == n - 1)
 		return (1);
 	return (is_prime_number_aux(n, i + 1));
 }
