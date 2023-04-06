@@ -13,9 +13,9 @@ int _sqrt_aux(int low, int high, int n)
 	{
 		int mid = (low + high) / 2;
 
-		if (mid * mid == n)
+		if ((long)mid * mid == n)
 			return (mid);
-		else if (mid * mid > n)
+		else if ((long)mid * mid > n)
 			return (_sqrt_aux(low, mid - 1, n));
 		else
 			return (_sqrt_aux(mid + 1, high, n));
