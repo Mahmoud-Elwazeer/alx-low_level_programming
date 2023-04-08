@@ -12,13 +12,17 @@ int main(int argc, char *argv[])
 {
 	int i, sum = 0;
 	int flag = 1;
+	int j;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!(argv[i][0] >= '0' && argv[i][0] <= '9'))
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			flag = 0;
-			break;
+			if (!(argv[i][j] >= '0' && argv[i][j] <= '9'))
+			{
+				flag = 0;
+				break;
+			}
 		}
 		sum += atoi(argv[i]);
 	}
