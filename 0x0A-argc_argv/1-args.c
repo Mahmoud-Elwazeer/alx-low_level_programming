@@ -9,6 +9,6 @@
  */
 int main(int agrc, char __attribute__ ((unused)) *agrv[])
 {
-	printf("%d\n", agrc);
+	printf("%d\n", agrc - 1);
 	return (0);
 }
