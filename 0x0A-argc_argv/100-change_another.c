@@ -11,34 +11,39 @@
 int main(int argc, char *argv[])
 {
 	int n = 0;
-	int i = 0, j = 0;
-	int flag = 0;
+	int i;
 
 	if (argc > 1)
 	{
-		int count = 0, num = 0;
+		int count = 0, div = 0;
 		int coins[] =  {25, 10, 5, 2, 1};
 
 		n = atoi(argv[1]);
 		if (n > 0)
 		{
-			for (i = 0; i < 5; i++)
+			while (n > 0)
 			{
-				j = 1;
-				while (coins[i] * j <= n)
+				for (i = 0; i < 5; i++)
 				{
-					num = coins[i] * j;
-					flag = 1;
-					j++;
+					if (n % coins[i] == 0)
+					{
+						if (i == 0 || i == 1)
+						{
+							div = n / coins[i];
+							n -= div * coins[i];
+							count += div;
+						}
+						else
+						{
+							count += 1;
+							n -= coins[i];
+						}
+					}
+					if (n == 0)
+						break;
 				}
-				if (flag)
-				{
-					n -= num;
-					count += j;
-					flag = 0;
-				}
-			}	
-			printf("%d\n", count - 1);
+			}
+			printf("%d\n", count);
 		}
 		else
 			printf("0\n");
