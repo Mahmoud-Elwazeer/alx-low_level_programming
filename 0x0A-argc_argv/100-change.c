@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc > 1)
 	{
-		int count = 0;
+		int count = 0, div = 0;
 		int coins[] =  {25, 10, 5, 2, 1};
 
 		n = atoi(argv[1]);
@@ -27,9 +27,17 @@ int main(int argc, char *argv[])
 				{
 					if (n % coins[i] == 0)
 					{
-						count += 1;
-						n -= coins[i];
-						i--;
+						if (i == 0 || i == 1)
+						{
+							div = n / coins[i];
+							n -= div * coins[i];
+							count += div;
+						}
+						else
+						{
+							count += 1;
+							n -= coins[i];
+						}
 					}
 					if (n == 0)
 						break;
