@@ -6,7 +6,7 @@
  * main - Entry func
  * @argc: Number of commands
  * @argv: array include commands
- * Return: Always 0
+ * Return  Always 0
  */
 int main(int argc, char *argv[])
 {
