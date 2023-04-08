@@ -11,13 +11,31 @@
 int main(int argc, char *argv[])
 {
 	int n = 0;
+	int i;
 
 	if (argc > 1)
 	{
+		int count = 0;
+		int coins[] =  {25, 10, 5, 2, 1};
+
 		n = atoi(argv[1]);
-		if (n >= 0)
+		if (n > 0)
 		{
-			printf("1\n");
+			while (n > 0)
+			{
+				for (i = 0; i < 5; i++)
+				{
+					if (n % coins[i] == 0)
+					{
+						count += 1;
+						n -= coins[i];
+						i--;
+					}
+					if (n == 0)
+						break;
+				}
+			}
+			printf("%d\n", count);
 		}
 		else
 			printf("0\n");
