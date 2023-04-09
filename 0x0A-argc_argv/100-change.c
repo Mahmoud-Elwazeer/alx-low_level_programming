@@ -34,11 +34,11 @@ int main(int argc, char *argv[])
 				if (flag)
 				{
 					n -= num;
-					count += j;
+					count += --j;
 					flag = 0;
 				}
 			}	
-			printf("%d\n", count - 1);
+			printf("%d\n", count);
 		}
 		else
 			printf("0\n");
