@@ -20,15 +20,15 @@ int main(int argc, char *argv[])
 			for (i = 0; i < 5; i++)
 			{
 				j = 1;
-				while (coins[i] * j <= n)
+				while ((long)coins[i] * j <= n)
 				{
-					num = coins[i] * j;
+					num = (long)coins[i] * j;
 					flag = 1;
 					j++;
 				}
 				if (flag)
 				{
-					n -= num;
+					n -= (long)num;
 					count += --j;
 					flag = 0;
 				}
