@@ -14,10 +14,16 @@ char *str_concat(char *s1, char *s2)
 	int size1, size2, size, count = 0;
 	char *stc;
 
-	for (size1 = 0; *(s1 + size1) != '\0'; size1++)
-		;
-	for (size2 = 0; *(s2 + size2) != '\0'; size2++)
-		;
+	if (s1 != NULL)
+		for (size1 = 0; *(s1 + size1) != '\0'; size1++)
+			;
+	else
+		size1 = 0;
+	if (s2 != NULL)
+		for (size2 = 0; *(s2 + size2) != '\0'; size2++)
+			;
+	else
+		size2 = 0;
 	size = size1 + size2;
 	stc = (char *)malloc(size * sizeof(char) + 1);
 	if (stc == NULL)
