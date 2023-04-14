@@ -3,14 +3,14 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
+ * main  Entry point
  * @argc: number of input
  * @argv: array of input
  * Return: Always 0 when success
  */
 int main(int argc, char *argv[])
 {
-	long mul, num1, num2;
+	long mul, num1,num2;
 
 	if (argc == 3)
 	{
