@@ -11,16 +11,17 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	int size1, size;
+	unsigned int size1, size;
 	unsigned int count = 0;
 
 	for (size1 = 0; *(s1 + size1) != '\0'; size1++)
 		;
 	size = size1 + n;
 	str = (char *)malloc(size);
-	for (count = 0; *(s1 + count) <= '\0'; count++)
+	if (str == NULL)
+		return (NULL);
+	for (count = 0; count < size1; count++)
 		*(str + count) = *(s1 + count);
-	size1++;
 	for (count = 0; count < n; count++)
 		*(str + size1++) = *(s2 + count);
 	*(str + size) = '\0';
