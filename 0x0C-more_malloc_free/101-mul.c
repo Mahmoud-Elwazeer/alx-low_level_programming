@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		num1 = atoi(argv[1]);
 		num2 = atoi(argv[2]);
 		mul = num1 * num2;
-		printf("%ld", mul);
+		printf("%ld\n", mul);
 		return (0);
 	}
 	else
