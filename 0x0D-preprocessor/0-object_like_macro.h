@@ -1,5 +1,4 @@
-#ifndef 0_OBJECT_LIKE_MICRO_H
-#define 0_OBJECT_LIKE_MIKRO_H
+#ifndef SIZE
 
 #define SIZE 1024
 
