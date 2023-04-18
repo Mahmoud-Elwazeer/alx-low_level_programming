@@ -1,5 +1,3 @@
-#include "dog.h"
-#include <stdlib.h>
 #include <unistd.h>
 
 /**
@@ -12,23 +10,4 @@
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
-}
-/**
- * free_dog - frees dog
- * @d: struct
- * Return: void
- */
-void free_dog(dog_t *d)
-{
-	if (d != NULL)
-	{
-		free(d->name);
-		free(d->owner);
-		free(d);
-	}
-	else
-	{
-		_putchar('0');
-		_putchar('\n');
-	}
 }
