@@ -26,9 +26,4 @@ void free_dog(dog_t *d)
 		free(d->owner);
 		free(d);
 	}
-	else
-	{
-		_putchar('0');
-		_putchar('\n');
-	}
 }
