@@ -23,17 +23,17 @@ void print_all(const char * const format, ...)
 
 		if (ch == 'c')
 			printf("%c", va_arg(args, int));
-		else if (ch == 'i')
+		if (ch == 'i')
 			printf("%d", va_arg(args, int));
-		else if (ch == 'f')
+		if (ch == 'f')
 			printf("%f", va_arg(args, double));
-		else if (ch == 's')
+		if (ch == 's')
 		{
 			printf("%s", va_arg(args, char *));
 		}
 		if (i != len-1 && (ch == 'c' || ch == 'i' || ch == 'f' || ch == 's'))
 			printf(", ");
-		else if (i == len - 1)
+		if (i == len - 1)
 			printf("\n");
 		i++;
 	}
