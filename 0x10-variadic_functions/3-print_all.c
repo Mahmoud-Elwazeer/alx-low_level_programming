@@ -9,11 +9,13 @@
  */
 void print_all(const char * const format, ...)
 {
-	int len, i = 0;
+	int len = 0, i = 0;
 	va_list args;
 
-	for (len = 0; *(format + len) != '\0'; len++)
-		;
+	while (*(format + len) != '\0')
+	{
+		len++;
+	}
 	va_start(args, format);
 	while (i < len)
 	{
