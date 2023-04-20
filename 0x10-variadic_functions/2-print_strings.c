@@ -30,16 +30,16 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			if (separator != NULL)
 			{
 				if (str == NULL)
-                                	printf("(nil)%s", separator);
-                        	else
-                                	printf("%s%s", str, separator);
+					printf("(nil)%s", separator);
+				else
+					printf("%s%s", str, separator);
 			}
 			else
 			{
 				if (str == NULL)
-                                        printf("(nil)");
-                                else
-                                        printf("%s", str);
+					printf("(nil)");
+				else
+					printf("%s", str);
 			}
 		}
 	}
