@@ -34,6 +34,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				printf("%s", va_arg(args, char *));
+				break;
 			default:
 				i++;
 				continue;
