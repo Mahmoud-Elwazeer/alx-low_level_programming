@@ -39,11 +39,10 @@ void print_all(const char * const format, ...)
 				i++;
 				continue;
 		}
-		if (i == len - 1)
-			printf("\n");
 		if (i != len - 1)
 			printf(", ");
 		i++;
 	}
+	printf("\n");
 	va_end(args);
 }
