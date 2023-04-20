@@ -31,7 +31,7 @@ void print_all(const char * const format, ...)
 		{
 			printf("%s", va_arg(args, char *));
 		}
-		if (i != len-1 && (ch == 'c' || ch == 'i' || ch == 'f' || ch == 's'))
+		if ((i != len - 1) && (ch == 'c' || ch == 'i' || ch == 'f' || ch == 's'))
 			printf(", ");
 		if (i == len - 1)
 			printf("\n");
