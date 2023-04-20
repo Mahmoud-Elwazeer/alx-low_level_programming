@@ -21,12 +21,28 @@ void print_all(const char * const format, ...)
 	{
 		char ch = *(format + i);
 
-		if (ch == 'i')
-			printf("%d", va_arg(args, int));
-		if (ch == 's')
+		switch (ch)
 		{
-			printf("%s", va_arg(args, char *));
+			case 'c':
+				printf("%c", va_arg(args, int));
+				break;
+			case 'i':
+				printf("%i", va_arg(args, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(args, double));
+				break;
+			case 's':
+				printf("%s", va_arg(args, char *));
+				break;
+			default:
+				i++;
+				continue;
 		}
+		if (i == len - 1)
+			printf("\n");
+		if (i != len - 1)
+			printf(", ");
 		i++;
 	}
 	va_end(args);
