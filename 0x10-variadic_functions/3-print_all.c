@@ -12,11 +12,6 @@ void print_all(const char * const format, ...)
 	int len = 0, i = 0;
 	va_list args;
 
-	if (format == NULL)
-	{
-		printf("\n");
-		return;
-	}
 	while (*(format + len) != '\0')
 	{
 		len++;
