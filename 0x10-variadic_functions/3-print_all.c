@@ -13,7 +13,10 @@ void print_all(const char * const format, ...)
 	va_list args;
 
 	if (format == NULL)
+	{
+		printf("\n");
 		return;
+	}
 	while (*(format + len) != '\0')
 	{
 		len++;
