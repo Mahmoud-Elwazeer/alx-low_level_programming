@@ -15,6 +15,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	last = *head;
 	new->str = (char *)str;
+	new->len = _strlen((char *)str);
 	new->next = NULL;
 
 	if (*head == NULL)
@@ -27,4 +28,18 @@ list_t *add_node(list_t **head, const char *str)
 	last->next = new;
 
 	return (new);
+}
+
+/**
+ * _strlen - retunr number of string
+ * @str: pointer to string
+ * Return: NUmber of string
+ */
+size_t _strlen(char *str)
+{
+	int size;
+
+	for (size = 0; *(str + size) != '\0'; size++)
+		;
+	return (size);
 }
