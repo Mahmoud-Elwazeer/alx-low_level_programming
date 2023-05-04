@@ -12,11 +12,8 @@ void print_binary(unsigned long int n)
 	int num, flag = 0;
 
 	if (n == 0)
-	{
 		_putchar('0');
-		return;
-	}
-	while (i >= 0)
+	while (i >= 0 && n != 0)
 	{
 		num = (n >> i) & 1;
 		if (num == 1 && flag == 0)
