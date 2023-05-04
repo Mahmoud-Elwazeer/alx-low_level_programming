@@ -8,8 +8,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i = 31;
-	int num, flag = 0;
+	unsigned int i = 31;
+	unsigned int num, flag = 0;
 
 	if (n == 0)
 		_putchar('0');
