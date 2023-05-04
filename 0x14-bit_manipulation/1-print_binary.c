@@ -8,7 +8,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int i = 31;
+	int i = sizeof(unsigned long int) * 8 - 1;
 	unsigned int num, flag = 0;
 
 	if (n == 0)
