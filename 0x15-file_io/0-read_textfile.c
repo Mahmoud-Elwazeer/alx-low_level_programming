@@ -1,4 +1,6 @@
 #include "main.h"
+#include <unistd.h>
+#include <fcntl.h>
 
 /**
  * read_textfile -  reads a text file and prints it
@@ -9,36 +11,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fptr;
-	ssize_t size = 0;
-	char ch;
+	ssize_t size = 0, read_byte;
+	char *ch;
+	int fd;
 
 	if (filename == NULL)
 		return (0);
 	
-	if ((fptr = fopen(filename, "r")) == NULL)
+	if ((fd = open(filename, O_RDONLY)) == -1)
 		return (0);
 	
-	while ((letters--) && (ch = getc(fptr)) != EOF)
+	ch = (char *)malloc(sizeof(char) * letters);
+	if (ch == NULL)
+		return (0);
+
+	while ((read_byte = read(fd, ch, letters)) != 0 && size < (ssize_t)letters)
 	{
-		size++;
-		_putchar(ch);
+		size += read_byte;
+		if ((write(STDOUT_FILENO, ch, read_byte)) == -1)
+			return (0);
 	}
-
-	fclose(fptr);
-	return (size);
-}
-
-#include <unistd.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
+	
+	close(fd);
+	free(ch);
+	return (size++);
 }
