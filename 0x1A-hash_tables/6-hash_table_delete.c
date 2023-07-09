@@ -21,7 +21,7 @@ void free_hash_node(hash_node_t *node)
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	int i = 0;
+	unsigned long int i = 0;
 
 	for (i = 0; i < ht->size; i++)
 	{
