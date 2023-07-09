@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * free_node - free node of hash table
+ * free_hash_node - free node of hash table
  * @node: element in hash table
  *
  * Return: void
@@ -26,6 +26,7 @@ void hash_table_delete(hash_table_t *ht)
 	for (i = 0; i < ht->size; i++)
 	{
 		hash_node_t *temp = ht->array[i];
+
 		if (temp != NULL)
 			free_hash_node(temp);
 	}
