@@ -40,11 +40,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 /**
  * create_node - create new item in hash
  * @key: key
- * @vakue: value
+ * @value: value
  *
  * Return: new node
  */
-hash_node_t *create_node(const char* key, const char* value)
+hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *temp = (hash_node_t *)malloc(sizeof(hash_node_t));
 
