@@ -14,24 +14,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *current_node = NULL;
 
 	if (key == NULL || ht == NULL)
-		return (1);
+		return (0);
 	temp = create_node(key, value);
 	index = key_index((const unsigned char *)key, ht->size);
 	if (temp == NULL)
-		return (1);
+		return (0);
 
 	current_node = ht->array[index];
 	if (current_node == NULL)
 	{
 		ht->array[index] = temp;
-		return (0);
+		return (1);
 	}
 	else
 	{
 		if (strcmp(current_node->key, key) == 0)
 		{
 			strcpy(ht->array[index]->value, value);
-			return (0);
+			return (1);
 		}
 	}
 	return (0);
