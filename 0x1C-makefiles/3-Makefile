@@ -7,25 +7,22 @@ CC = gcc
 SRC = main.c school.c
 
 # OBJ: the .o files
-IBJ = main.o school.o
+OBJ = $(SRC:.c=.o)
 
 # NAME: the name of the executable
 NAME = school
 
 all: $(NAME)
 
-$(IBJ): %.o: %.c
-	$(CC) -c -o $@ $<
-
 $(NAME): $(IBJ)
-	$(CC) $(IBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 #deletes all Emacs and Vim temporary files along with the executable
 clean:
 	rm -f *~ $(NAME)
 #deletes the object files
 oclean:
-	rm -f $(IBJ)
+	rm -f $(OBJ)
 # deletes all Emacs and Vim temporary files, the executable, and the object files
 fclean: clean oclean
 
