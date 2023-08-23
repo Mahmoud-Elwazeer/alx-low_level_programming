@@ -14,14 +14,25 @@ NAME = school
 
 all: $(NAME)
 
+$(IBJ): %.o: %.c
+	$(CC) -c -o $@ $<
+
 $(NAME): $(IBJ)
 	$(CC) $(IBJ) -o $(NAME)
 
-main.o: main.c
-	$(CC) 	-c -o main.o main.c
-
-school.o: school.c
-	$(CC) 	-c -o school.o school.c
-
+#deletes all Emacs and Vim temporary files along with the executable
 clean:
+	rm -f *~ $(NAME)
+#deletes the object files
+oclean:
 	rm -f $(IBJ)
+# deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean:
+	rm -f *~ $(NAME)
+	rm -f $(IBJ)
+
+# forces recompilation of all source files
+re:
+	rm -f $(IBJ)
+	$(CC) -c -o $(IBJ) $(SRC)
+	$(CC) $(IBJ) -o $(NAME)
