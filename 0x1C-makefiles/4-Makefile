@@ -3,25 +3,33 @@
 # CC: the compiler to be used
 CC = gcc
 
+# your favorite compiler flags: -Wall -Werror -Wextra -pedantic
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
 # SRC: the .c files
 SRC = main.c school.c
 
 # OBJ: the .o files
-IBJ = main.o school.o
+OBJ = $(SRC:.c=.o)
 
 # NAME: the name of the executable
 NAME = school
 
+RM = rm -f
+
 all: $(NAME)
 
-$(NAME): $(IBJ)
-	$(CC) $(IBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-main.o: main.c
-	$(CC) 	-c -o main.o main.c
-
-school.o: school.c
-	$(CC) 	-c -o school.o school.c
-
+#deletes all Emacs and Vim temporary files along with the executable
 clean:
-	rm -f $(IBJ)
+	$(RM) *~ $(NAME)
+#deletes the object files
+oclean:
+	$(RM) -f $(OBJ)
+# deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean: clean oclean
+
+# forces recompilation of all source files
+re: oclean all
