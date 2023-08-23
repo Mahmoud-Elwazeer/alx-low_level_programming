@@ -19,7 +19,7 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 #deletes all Emacs and Vim temporary files along with the executable
