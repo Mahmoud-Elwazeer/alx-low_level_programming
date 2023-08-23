@@ -15,10 +15,6 @@ NAME = school
 all: $(NAME)
 
 $(NAME): $(IBJ)
+	$(CC) -c $(SRC)
 	$(CC) $(IBJ) -o $(NAME)
-
-%.o: %.c
-	$(CC) -c $<
-
-clean:
 	rm -f $(IBJ)
