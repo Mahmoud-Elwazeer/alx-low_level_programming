@@ -15,13 +15,9 @@ OBJ = $(SRC:.c=.o)
 # NAME: the name of the executable
 NAME = school
 
-RM = rm -f
-
 .PHONY : all clean oclean fclean re
 
-all: $(NAME)
-
-$(NAME): m.h $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 #deletes all Emacs and Vim temporary files along with the executable
@@ -29,7 +25,7 @@ clean:
 	$(RM) *~ $(NAME)
 #deletes the object files
 oclean:
-	$(RM) -f $(OBJ)
+	$(RM) $(OBJ)
 # deletes all Emacs and Vim temporary files, the executable, and the object files
 fclean: clean oclean
 
