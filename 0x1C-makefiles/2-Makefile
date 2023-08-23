@@ -14,11 +14,11 @@ NAME = school
 
 all: $(NAME)
 
-$(IBJ): %.o: %.c
+$(OBJ): %.o: %.c
 	$(CC) -c -o $@ $<
 
-$(NAME): $(IBJ)
-	$(CC) $(IBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	rm -f $(IBJ)
+	rm -f $(OBJ)
