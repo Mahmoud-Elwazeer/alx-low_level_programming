@@ -27,12 +27,7 @@ clean:
 oclean:
 	rm -f $(IBJ)
 # deletes all Emacs and Vim temporary files, the executable, and the object files
-fclean:
-	rm -f *~ $(NAME)
-	rm -f $(IBJ)
+fclean: clean oclean
 
 # forces recompilation of all source files
-re:
-	rm -f $(IBJ)
-	$(CC) -c -o $(IBJ) $(SRC)
-	$(CC) $(IBJ) -o $(NAME)
+re: oclean all
