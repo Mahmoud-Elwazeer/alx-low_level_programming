@@ -7,15 +7,12 @@ CC = gcc
 SRC = main.c school.c
 
 # OBJ: the .o files
-OBJ = main.o school.o
+OBJ = $(SRC:.c=.o)
 
 # NAME: the name of the executable
 NAME = school
 
 all: $(NAME)
-
-$(OBJ): %.o: %.c
-	$(CC) -c -o $@ $<
 
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
