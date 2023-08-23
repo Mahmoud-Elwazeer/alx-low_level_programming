@@ -14,7 +14,7 @@ NAME = school
 
 all: $(NAME)
 
-$(NAME): $(IBJ)
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 #deletes all Emacs and Vim temporary files along with the executable
