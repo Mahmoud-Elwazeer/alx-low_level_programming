@@ -1,1 +1,2 @@
-n square -> O(n^2)
+log(n) -> O(log(n))
+
